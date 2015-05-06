@@ -1,15 +1,19 @@
+
 import java.util.ArrayList;
 
 public class ArchivioCD {
 
-	ArrayList<CD> elencoCD = new ArrayList<CD>();
+	private ArrayList<CD> elencoCD;
 	
 	public ArchivioCD(CD... nuoviCD){
-		
+		elencoCD = new ArrayList<CD>();
 		for (CD cd: nuoviCD) elencoCD.add(cd);
 		
 	}
 	
+	public ArchivioCD(){
+		elencoCD = new ArrayList<CD>();
+	}
 	
 	public void addCD (CD nuovo){
 		
@@ -19,7 +23,7 @@ public class ArchivioCD {
 	
 	public CD getCD(int index){
 		
-		return elenco.get(index);
+		return elencoCD.get(index);
 		
 	}
 	
